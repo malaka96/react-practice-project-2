@@ -1,7 +1,13 @@
-import React from 'react'
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { GlobalContext } from '../context/GlobalContext'
 
 const Navbar = () => {
+
+  const {searchParam, setSearchParam} = useContext(GlobalContext)!;
+
+  console.log(searchParam);
+
   return (
     <nav className="bg-white border-b shadow-sm px-6 py-3 flex items-center justify-between">
       {/* Left: Website name */}
@@ -12,6 +18,8 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search..."
+          value={searchParam}
+          onChange={(event) => setSearchParam(event.target.value)}
           className="w-64 px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
