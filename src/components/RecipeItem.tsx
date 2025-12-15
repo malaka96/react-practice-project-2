@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import type { Recipe } from "../context/GlobalContext"
 
 
-const RecipeItem = (recipe : Recipe) => {
+const RecipeItem = ({recipe}:{recipe : Recipe}) => {
   return (
     <div className="bg-white border shadow-sm rounded-lg p-4 w-72 hover:shadow-md transition">
       
@@ -29,13 +30,7 @@ const RecipeItem = (recipe : Recipe) => {
 
       {/* Footer Actions */}
       <div className="flex justify-between items-center">
-        <a
-          href={recipe.source_url}
-          target="_blank"
-          className="text-sm text-blue-600 hover:underline"
-        >
-          View Recipe
-        </a>
+        <Link to={`/recipe-item/${recipe.recipe_id}`}>View Recipe</Link>
 
         <a
           href={recipe.publisher_url}

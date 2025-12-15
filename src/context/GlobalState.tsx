@@ -25,7 +25,7 @@ const GlobalState = ({ children }: Props) => {
       );
       const data = await response.json();
       if (data?.recipes) {
-        setRecipes(data);
+        setRecipes(data.recipes);
         setLoding(false);
         setSearchParam("");
       }

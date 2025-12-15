@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white border-b shadow-sm px-6 py-3 flex items-center justify-between">
       {/* Left: Website name */}
-      <div className="text-lg font-bold text-gray-800">MyWeatherSite</div>
+      <div className="text-lg font-bold text-gray-800">Recify</div>
 
       {/* Middle: Input field (fixed width, not full) */}
       <div className="mx-6">
