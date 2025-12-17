@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-/* .active {
-  color: red;
+.active {
+  color: blueviolet;
   font-weight: bold;
-  border-bottom: 2px solid red;
-} */
+}
